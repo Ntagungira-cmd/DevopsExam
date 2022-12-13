@@ -119,22 +119,12 @@ class Calculator extends Component {
                 <div className='input-container'>
                     <div></div>
                     <div className='input-value'>
-                        <input type='text' disabled={true} value={this.state.currentValue}  data-cy="result"/>
+                        <input type='number' disabled={true} value={this.state.currentValue}  data-cy="result"/>
                     </div>
                     <div></div>
                 </div>
                 <div className='numbers-container'>
                     <div className='numbers'>
-                        <button value={1} onClick={this.numberButtonClicked} data-cy="button1">1</button>
-                        <button value={2} onClick={this.numberButtonClicked} data-cy="button2">2</button>
-                        <button value={3} onClick={this.numberButtonClicked} data-cy="button3">3</button>
-                        <button value={4} onClick={this.numberButtonClicked} data-cy="button4">4</button>
-                        <button value={5} onClick={this.numberButtonClicked} data-cy="button5">5</button>
-                        <button value={6} onClick={this.numberButtonClicked} data-cy="button6">6</button>
-                        <button value={7} onClick={this.numberButtonClicked} data-cy="button7">7</button>
-                        <button value={8} onClick={this.numberButtonClicked} data-cy="button8">8</button>
-                        <button value={9} onClick={this.numberButtonClicked} data-cy="button9">9</button>
-                        <button value={0} onClick={this.numberButtonClicked} data-cy="button0">0</button>
                         <button value={'C'} className='clear' onClick={this.operandButtonClicked} data-cy="buttonClear">C</button>
                         <button value={'='} className='equals' onClick={this.operandButtonClicked} data-cy="buttonEquals">=</button>
                     </div>
