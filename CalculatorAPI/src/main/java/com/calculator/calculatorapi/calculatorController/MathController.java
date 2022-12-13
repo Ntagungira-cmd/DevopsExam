@@ -4,6 +4,7 @@ import com.calculator.calculatorapi.CalculatorService.MathOperator;
 import com.calculator.calculatorapi.Dto.DoMathRequest;
 import com.calculator.calculatorapi.Dto.DoMathResponse;
 import com.calculator.calculatorapi.Exceptions.InvalidOperationException;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,9 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
+@RequiredArgsConstructor
 public class MathController {
-    @Autowired
-    private MathOperator mathOperator;
+
+    private final MathOperator mathOperator;
 
     @PostMapping("/math")
     public DoMathResponse DoMath(@RequestBody DoMathRequest request) throws InvalidOperationException {
